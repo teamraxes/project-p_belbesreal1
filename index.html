@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>belbes — сайты для founders</title>
+<meta name="description" content="Премиальная цифровая студия для founders. Сайты с продуманной типографикой и точной композицией. Запрос — бриф — макет — сборка." />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-screen-label="/home">
+<div class="site">
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="wordmark" href="index.html" aria-label="belbes — главная">
+      belbes<span class="dot">.</span>
+    </a>
+    <nav class="nav" aria-label="Основное">
+      <a href="cases.html">Кейсы</a>
+      <a href="offerings.html">Тарифы</a>
+      <a href="about.html">Студия</a>
+      <a href="journal.html">Журнал</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a href="contacts.html" class="btn btn--secondary">Оставить заявку</a>
+    <button class="nav-toggle" aria-label="Открыть меню" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Меню">
+  <div class="mobile-nav__top">
+    <a class="wordmark" href="index.html">belbes<span class="dot">.</span></a>
+    <button class="mobile-nav__close btn btn--ghost" type="button" aria-label="Закрыть меню">Закрыть</button>
+  </div>
+  <ul class="mobile-nav__list">
+    <li><a href="cases.html"><em>Кейсы</em></a></li>
+    <li><a href="offerings.html"><em>Тарифы</em></a></li>
+    <li><a href="about.html"><em>Студия</em></a></li>
+    <li><a href="journal.html"><em>Журнал</em></a></li>
+    <li><a href="contacts.html"><em>Контакты</em></a></li>
+  </ul>
+</div>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" data-screen-label="home/hero">
+    <div class="container">
+      <div class="eyebrow">Студия дизайна&nbsp;— Москва, с&nbsp;2019</div>
+      <h1 class="hero__head">
+        Сайты для <em>founders,</em><br>
+        которые продают<br>
+        сложный продукт<span class="dot">.</span>
+      </h1>
+      <p class="hero__sub">
+        Делаем продуманную типографику и&nbsp;точную композицию для&nbsp;команд 5–50&nbsp;человек. Один проект&nbsp;— одна композиция, одна изюминка.
+      </p>
+      <div class="hero__cta">
+        <a href="contacts.html" class="btn btn--primary">Оставить заявку
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+        <a href="https://t.me/teamraxes" class="btn btn--ghost" target="_blank" rel="noopener">
+          Бриф в&nbsp;Telegram за&nbsp;15&nbsp;минут
+        </a>
+      </div>
+
+      <!-- Ambient hero media (placeholder for 15–25s muted loop / fallback photo) -->
+      <div class="hero__media">
+        <svg class="img-art" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect class="bg" width="1600" height="700" />
+          <!-- diffuse window light -->
+          <rect x="0" y="0" width="1600" height="700" fill="#FAFAFA" opacity="0.0"/>
+          <rect x="980" y="80" width="540" height="540" fill="#FAFAFA" opacity="0.55"/>
+          <rect x="980" y="80" width="540" height="540" fill="none" stroke="#E5E1DA" stroke-width="1"/>
+          <line x1="1250" y1="80" x2="1250" y2="620" stroke="#E5E1DA" stroke-width="1"/>
+          <line x1="980" y1="350" x2="1520" y2="350" stroke="#E5E1DA" stroke-width="1"/>
+          <!-- desk surface horizon -->
+          <rect x="0" y="520" width="1600" height="180" fill="#E8E3DA"/>
+          <!-- folded paper -->
+          <polygon points="120,540 360,540 380,690 100,690" fill="#FAFAFA" stroke="#E5E1DA" stroke-width="1"/>
+          <line x1="240" y1="540" x2="240" y2="690" stroke="#E5E1DA" stroke-width="1"/>
+          <!-- monitor showing typographic specimen -->
+          <rect x="500" y="280" width="380" height="240" fill="#FAFAFA" stroke="#0A0A0A" stroke-width="1"/>
+          <rect x="500" y="280" width="380" height="20" fill="#0A0A0A"/>
+          <text x="520" y="380" font-family="Cormorant, serif" font-style="italic" font-size="64" fill="#0A0A0A">Aa</text>
+          <line x1="520" y1="420" x2="860" y2="420" stroke="#E5E1DA" stroke-width="2"/>
+          <line x1="520" y1="450" x2="780" y2="450" stroke="#E5E1DA" stroke-width="2"/>
+          <line x1="520" y1="475" x2="820" y2="475" stroke="#E5E1DA" stroke-width="2"/>
+          <line x1="500" y1="540" x2="880" y2="540" stroke="#0A0A0A" stroke-width="6"/>
+          <!-- single red ceramic accent -->
+          <circle cx="940" cy="610" r="22" fill="#EB0000"/>
+          <ellipse cx="940" cy="632" rx="22" ry="4" fill="#0A0A0A" opacity="0.18"/>
+        </svg>
+        <span class="img-tag">Ambient loop&nbsp;· 15–25s muted</span>
+        <span class="media-caption">Утренний свет. Без&nbsp;людей.</span>
+      </div>
+
+      <!-- Stats / hero meta -->
+      <div class="hero__meta">
+        <div class="hero__meta-item">
+          <div class="num">42</div>
+          <div class="label">проекта с&nbsp;2019. Founder-led команды от&nbsp;5&nbsp;до&nbsp;50&nbsp;человек.</div>
+        </div>
+        <div class="hero__meta-item">
+          <div class="num">6–8</div>
+          <div class="label">недель на&nbsp;премиальный сайт. Бриф, макет, сборка&nbsp;— четыре этапа.</div>
+        </div>
+        <div class="hero__meta-item">
+          <div class="num">×2,4</div>
+          <div class="label">средний рост конверсии лид-формы у&nbsp;клиентов после редизайна.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process / Approach -->
+  <section class="section section--warm" id="process" data-screen-label="home/process">
+    <div class="container">
+      <div class="eyebrow">Подход</div>
+      <h2 class="page-head__title" style="margin-top: 24px; max-width: 18ch;">
+        Четыре этапа<br>
+        и&nbsp;одна <em>изюминка<span class="dot">.</span></em>
+      </h2>
+      <p class="hero__sub" style="margin-top: 32px;">
+        Мы&nbsp;не&nbsp;собираем сайт из&nbsp;шаблонов. Каждый проект&nbsp;— это одна композиция, выстроенная вокруг главного сообщения founder'а. Слышим&nbsp;— проектируем&nbsp;— шлифуем&nbsp;— собираем.
+      </p>
+
+      <div class="steps" style="margin-top: 64px;">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3 class="step__title">Запрос</h3>
+          <p class="step__body">Письменный бриф или&nbsp;30&nbsp;минут в&nbsp;Zoom. Снимаем продукт, аудиторию, ограничения и&nbsp;tone&nbsp;of&nbsp;voice.</p>
+          <div class="step__time">1 неделя</div>
+        </div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3 class="step__title">Бриф</h3>
+          <p class="step__body">Структура страниц, карта смыслов и&nbsp;один-два эскиза композиции. Здесь решаем, где будет та&nbsp;самая изюминка.</p>
+          <div class="step__time">1 неделя</div>
+        </div>
+        <div class="step step--accent">
+          <div class="step__num">03</div>
+          <h3 class="step__title">Макет</h3>
+          <p class="step__body">Полноценный <em>визуальный</em> макет с&nbsp;типографикой, ритмом разделов и&nbsp;готовыми текстами. Без&nbsp;серых блоков и&nbsp;Lorem.</p>
+          <div class="step__time">2–3 недели</div>
+        </div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <h3 class="step__title">Сборка</h3>
+          <p class="step__body">Чистый HTML/CSS или&nbsp;Tilda&nbsp;Zero Block. Передаём код и&nbsp;Figma, не&nbsp;завязываем на&nbsp;себя.</p>
+          <div class="step__time">2 недели</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases preview -->
+  <section class="section" id="cases" data-screen-label="home/cases-preview">
+    <div class="container">
+      <div style="display:flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 64px;">
+        <div>
+          <div class="eyebrow">Кейсы</div>
+          <h2 class="page-head__title" style="margin-top: 24px; max-width: 16ch;">
+            Три композиции,<br>
+            три измеримых <em>результата.</em>
+          </h2>
+        </div>
+        <a href="cases.html" class="btn btn--ghost">Все&nbsp;кейсы</a>
+      </div>
+
+      <div class="cases">
+        <a class="case" href="case.html">
+          <div class="case__media">
+            <svg class="img-art" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect class="bg" width="600" height="750"/>
+              <!-- stationery flat-lay -->
+              <rect x="60" y="80" width="280" height="170" fill="#FAFAFA" stroke="#E5E1DA"/>
+              <text x="80" y="140" font-family="Cormorant, serif" font-style="italic" font-size="36" fill="#0A0A0A">Akra</text>
+              <line x1="80" y1="156" x2="180" y2="156" stroke="#EB0000" stroke-width="3"/>
+              <text x="80" y="200" font-family="Inter, sans-serif" font-size="12" fill="#6B6B6B">FOUNDER · ALEX SAMSONOV</text>
+              <text x="80" y="220" font-family="Inter, sans-serif" font-size="12" fill="#6B6B6B">+7 495 000 00 00</text>
+              <rect x="380" y="60" width="170" height="240" fill="#F0EDE8" stroke="#E5E1DA"/>
+              <rect x="100" y="320" width="430" height="180" fill="#FAFAFA" stroke="#E5E1DA"/>
+              <text x="130" y="380" font-family="Cormorant, serif" font-style="italic" font-size="48" fill="#0A0A0A">Akra<tspan fill="#EB0000">.</tspan></text>
+              <line x1="130" y1="400" x2="380" y2="400" stroke="#E5E1DA"/>
+              <line x1="130" y1="425" x2="320" y2="425" stroke="#E5E1DA"/>
+              <line x1="130" y1="445" x2="350" y2="445" stroke="#E5E1DA"/>
+              <line x1="130" y1="465" x2="290" y2="465" stroke="#E5E1DA"/>
+              <circle cx="430" cy="650" r="40" fill="#FAFAFA" stroke="#E5E1DA"/>
+            </svg>
+            <span class="img-tag">case_hero_01&nbsp;· brand identity</span>
+          </div>
+          <div class="case__meta">
+            <span>B2B&nbsp;· Identity + Site</span>
+            <span>2024</span>
+          </div>
+          <h3 class="case__title">Akra<em> — </em>складская робототехника, которой <em>верят</em></h3>
+          <div class="case__metric">×3,1<small>заявок в&nbsp;квартал</small></div>
+        </a>
+
+        <a class="case" href="case.html">
+          <div class="case__media">
+            <svg class="img-art" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect class="bg" width="600" height="750" fill="#1A1A1A"/>
+              <!-- laptop on dark desk -->
+              <rect x="80" y="180" width="440" height="280" fill="#0A0A0A" stroke="#2A2A2A"/>
+              <rect x="80" y="180" width="440" height="20" fill="#1A1A1A"/>
+              <text x="110" y="280" font-family="Cormorant, serif" font-style="italic" font-size="44" fill="#FAFAFA">Verra<tspan fill="#EB0000">.</tspan></text>
+              <line x1="110" y1="310" x2="200" y2="310" stroke="#EB0000" stroke-width="2"/>
+              <line x1="110" y1="340" x2="380" y2="340" stroke="#FAFAFA" opacity="0.18"/>
+              <line x1="110" y1="365" x2="330" y2="365" stroke="#FAFAFA" opacity="0.18"/>
+              <line x1="110" y1="390" x2="360" y2="390" stroke="#FAFAFA" opacity="0.18"/>
+              <line x1="110" y1="415" x2="280" y2="415" stroke="#FAFAFA" opacity="0.18"/>
+              <rect x="80" y="460" width="440" height="14" fill="#2A2A2A"/>
+              <line x1="180" y1="540" x2="380" y2="540" stroke="#FAFAFA" opacity="0.25" stroke-width="2"/>
+              <rect x="380" y="560" width="80" height="6" fill="#FAFAFA" opacity="0.3"/>
+            </svg>
+            <span class="img-tag img-tag--inverse">case_hero_02&nbsp;· dark hero site</span>
+          </div>
+          <div class="case__meta">
+            <span>Fintech&nbsp;· Lаnding</span>
+            <span>2024</span>
+          </div>
+          <h3 class="case__title">Verra<em> — </em>фактoring для&nbsp;<em>среднего</em> бизнеса</h3>
+          <div class="case__metric">×2,4<small>конверсии лид-формы</small></div>
+        </a>
+
+        <a class="case" href="case.html">
+          <div class="case__media">
+            <svg class="img-art" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect class="bg" width="600" height="750" fill="#FAFAFA"/>
+              <!-- swatch cards flat-lay with one red -->
+              <rect x="60" y="80" width="120" height="160" fill="#F0EDE8" stroke="#E5E1DA"/>
+              <rect x="200" y="80" width="120" height="160" fill="#E8E3DA" stroke="#E5E1DA"/>
+              <rect x="340" y="80" width="120" height="160" fill="#1A1A1A"/>
+              <rect x="60" y="260" width="120" height="160" fill="#EB0000"/>
+              <rect x="200" y="260" width="120" height="160" fill="#FAFAFA" stroke="#E5E1DA"/>
+              <rect x="340" y="260" width="120" height="160" fill="#F0EDE8" stroke="#E5E1DA"/>
+              <!-- packaging element -->
+              <rect x="120" y="460" width="360" height="220" fill="#FAFAFA" stroke="#E5E1DA"/>
+              <text x="150" y="530" font-family="Cormorant, serif" font-style="italic" font-size="36" fill="#0A0A0A">Plov-room</text>
+              <line x1="150" y1="552" x2="320" y2="552" stroke="#EB0000" stroke-width="3"/>
+              <text x="150" y="600" font-family="Inter, sans-serif" font-size="11" fill="#6B6B6B">ПЛОВ С&#160;БАРАНИНОЙ</text>
+              <text x="150" y="620" font-family="Inter, sans-serif" font-size="11" fill="#6B6B6B">МОСКВА, ПЯТНИЦКАЯ&#160;14</text>
+            </svg>
+            <span class="img-tag">case_hero_03&nbsp;· brand system</span>
+          </div>
+          <div class="case__meta">
+            <span>D2C&nbsp;· Brand + Site</span>
+            <span>2023</span>
+          </div>
+          <h3 class="case__title">Plov‑room<em> — </em>сеть, которая <em>звучит</em> на&nbsp;Пятницкой</h3>
+          <div class="case__metric">×1,8<small>средний чек</small></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto / deep section -->
+  <section class="section section--deep" data-screen-label="home/manifesto">
+    <div class="container">
+      <div class="eyebrow">Манифест</div>
+      <p class="manifesto" style="margin-top: 28px;">
+        Wow приходит из&nbsp;исполнения,<br>
+        не&nbsp;из&nbsp;громкости. Сначала&nbsp;— тишина<br>
+        страницы, потом&nbsp;— <em>одна точка</em><span class="dot">.</span>
+      </p>
+      <div class="manifesto__sig">Артём&nbsp;Б., founder&nbsp;belbes&nbsp;— Москва, 2019</div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section" id="cta" data-screen-label="home/cta">
+    <div class="container">
+      <div class="lead">
+        <div class="lead__intro">
+          <div class="eyebrow">Заявка</div>
+          <h2 style="margin-top: 28px;">
+            Расскажите про&nbsp;<em>продукт<span class="dot">.</span></em>
+          </h2>
+          <p>
+            Ответим в&nbsp;течение рабочего дня. Если предпочитаете чат&nbsp;— напишите в&nbsp;Telegram, бриф снимется за&nbsp;15&nbsp;минут.
+          </p>
+          <div class="lead__contact">
+            <div>
+              <span class="label">Почта</span>
+              <a href="mailto:hello@belbes.ru">hello@belbes.ru</a>
+            </div>
+            <div>
+              <span class="label">Telegram</span>
+              <a href="https://t.me/teamraxes" target="_blank" rel="noopener">@teamraxes</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" novalidate>
+          <div class="form__body" style="display: contents;">
+            <div class="field">
+              <label class="field__label" for="name">Имя</label>
+              <input class="field__input" id="name" name="name" type="text" placeholder="Артём" data-required data-required-msg="Как к&nbsp;вам обращаться?" />
+              <div class="field__error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="company">Компания</label>
+              <input class="field__input" id="company" name="company" type="text" placeholder="Akra" />
+              <div class="field__error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="email">Почта</label>
+              <input class="field__input" id="email" name="email" type="email" placeholder="founder@company.ru" data-required data-required-msg="Куда отправить ответ?" />
+              <div class="field__error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="tg">Telegram, по&nbsp;желанию</label>
+              <input class="field__input" id="tg" name="tg" type="text" placeholder="@username" />
+              <div class="field__error" aria-live="polite"></div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label" for="task">Задача в&nbsp;двух абзацах</label>
+              <textarea class="field__textarea" id="task" name="task" placeholder="Сайт для&nbsp;запуска складской робототехники. Нужны лендинг + кейс-стади. Сроки&nbsp;— к&nbsp;марту." data-required data-required-msg="Несколько строк хватит для&nbsp;начала."></textarea>
+              <div class="field__error" aria-live="polite"></div>
+            </div>
+            <div class="field field--full">
+              <span class="field__label">Бюджет, ориентир</span>
+              <div class="budget-chips" role="group" aria-label="Бюджет">
+                <button type="button" class="budget-chip" data-value="400-700" aria-pressed="false">400–700&nbsp;тыс</button>
+                <button type="button" class="budget-chip" data-value="700-1500" aria-pressed="false">700&nbsp;тыс&nbsp;— 1,5&nbsp;млн</button>
+                <button type="button" class="budget-chip" data-value="1500+" aria-pressed="false">1,5&nbsp;млн+</button>
+                <button type="button" class="budget-chip" data-value="discuss" aria-pressed="false">Обсудим</button>
+                <input type="hidden" name="budget" value="" />
+              </div>
+            </div>
+            <div class="form__submit">
+              <p class="form__note">Нажимая «Отправить», вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки данных</a>.</p>
+              <button type="submit" class="btn btn--primary">Отправить заявку
+                <span class="arrow" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+          <div class="form__success is-hidden" aria-live="polite">
+            <span class="check" aria-hidden="true">✓</span>
+            <h3>Спасибо, <span data-name-out>founder</span><span class="t-accent">.</span></h3>
+            <p>Ответим письмом в&nbsp;течение рабочего дня. Если срочно&nbsp;— <a href="https://t.me/teamraxes" target="_blank" rel="noopener">@teamraxes</a> в&nbsp;Telegram.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <a class="site-footer__wordmark" href="index.html">belbes<span class="dot">.</span></a>
+    <div class="site-footer__row">
+      <div class="site-footer__col">
+        <h4>Студия</h4>
+        <a href="about.html">О&nbsp;нас</a>
+        <a href="cases.html">Кейсы</a>
+        <a href="journal.html">Журнал</a>
+      </div>
+      <div class="site-footer__col">
+        <h4>Услуги</h4>
+        <a href="offerings.html">Лендинг</a>
+        <a href="offerings.html">Multipage</a>
+        <a href="offerings.html">Premium под&nbsp;ключ</a>
+      </div>
+      <div class="site-footer__col">
+        <h4>Связь</h4>
+        <a href="mailto:hello@belbes.ru">hello@belbes.ru</a>
+        <a href="https://t.me/teamraxes" target="_blank" rel="noopener">@teamraxes</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div class="site-footer__col">
+        <h4>Документы</h4>
+        <a href="#">Договор-оферта</a>
+        <a href="#">Политика данных</a>
+        <a href="#">ИП Белбес А.</a>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <div>© 2019–2026 belbes studio. Москва</div>
+      <div>Сделано здесь, в&nbsp;Москве<span style="color: var(--accent);">.</span></div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+/* ─────────────────────────────────────────────────────────────────
+   Тимур — Foundations
+   Premium digital design studio for founders.
+   Editorial discipline. Single accent. Generous typographic scale.
+   ───────────────────────────────────────────────────────────────── */
+
+/* Fonts ────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Cormorant";
+  src: url("fonts/cormorant-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("fonts/cormorant-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ── Color tokens ─────────────────────────────────────────────── */
+  /* Canvas — warm cream, not stark white */
+  --tm-canvas:        #FAFAFA;
+  --tm-canvas-warm:   #F0EDE8;   /* secondary surface, panels, dividers */
+  --tm-canvas-deep:   #1A1A1A;   /* inverted sections */
+
+  /* Ink — single near-black */
+  --tm-ink:           #0A0A0A;
+  --tm-ink-muted:     #6B6B6B;
+  --tm-ink-faint:     #B8B5B0;
+  --tm-rule:          #E5E1DA;   /* hairline dividers on warm canvas */
+
+  /* Accent — house red. Punctuation only. Never decorative. */
+  --tm-accent:        #EB0000;
+  --tm-accent-ink:    #FAFAFA;   /* text laid on accent */
+
+  /* Inverted ink */
+  --tm-ink-inverse:   #FAFAFA;
+  --tm-rule-inverse:  rgba(255, 255, 255, 0.14);
+
+  /* Semantic aliases ──────────────────────────────────────────── */
+  --bg:               var(--tm-canvas);
+  --bg-warm:          var(--tm-canvas-warm);
+  --fg:               var(--tm-ink);
+  --fg-muted:         var(--tm-ink-muted);
+  --fg-faint:         var(--tm-ink-faint);
+  --rule:             var(--tm-rule);
+  --accent:           var(--tm-accent);
+  --on-accent:        var(--tm-accent-ink);
+
+  /* ── Type families ────────────────────────────────────────────── */
+  --font-display: "Cormorant", "Times New Roman", Georgia, serif;
+  --font-body:    "Inter", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+
+  /* ── Type scale (fluid; clamp-driven) ─────────────────────────── */
+  --t-display-xl: clamp(64px, 9vw, 168px);
+  --t-display-l:  clamp(56px, 7vw, 128px);
+  --t-display-m:  clamp(40px, 5.2vw, 88px);
+  --t-display-s:  clamp(32px, 3.6vw, 56px);
+
+  --t-h1:         clamp(40px, 4.4vw, 72px);
+  --t-h2:         clamp(28px, 2.8vw, 44px);
+  --t-h3:         clamp(22px, 2vw, 28px);
+  --t-h4:         18px;
+
+  --t-body-l:     19px;
+  --t-body:       17px;
+  --t-body-s:     15px;
+  --t-caption:    13px;
+  --t-eyebrow:    12px;
+
+  /* ── Tracking ─────────────────────────────────────────────────── */
+  --tr-display:   -0.025em;  /* tight on display */
+  --tr-tight:     -0.015em;
+  --tr-normal:    0;
+  --tr-eyebrow:    0.14em;   /* wide for ALL CAPS labels */
+
+  /* ── Leading ──────────────────────────────────────────────────── */
+  --lh-display:   0.98;
+  --lh-tight:     1.08;
+  --lh-snug:      1.25;
+  --lh-body:      1.55;
+  --lh-loose:     1.7;
+
+  /* ── Spacing scale (4-base) ───────────────────────────────────── */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+  --s-11: 192px;
+
+  /* ── Radii — restrained ───────────────────────────────────────── */
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-pill: 999px;
+
+  /* ── Hairlines & elevation ────────────────────────────────────── */
+  --hairline: 1px;
+  --hairline-bold: 2px;
+  /* No drop shadows by default. Elevation is communicated through composition, not shadow. */
+  --elev-1: 0 1px 0 0 var(--tm-rule);
+  --elev-overlay: 0 24px 60px -24px rgba(10, 10, 10, 0.18);
+
+  /* ── Motion ───────────────────────────────────────────────────── */
+  --ease-editorial: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --dur-fast:   180ms;
+  --dur-base:   320ms;
+  --dur-slow:   640ms;
+
+  /* ── Layout ───────────────────────────────────────────────────── */
+  --gutter:      clamp(20px, 4vw, 56px);
+  --max-width:   1440px;
+  --measure:     64ch;        /* readable body width */
+  --measure-display: 22ch;
+}
+
+/* ── Element defaults ───────────────────────────────────────────── */
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  font-weight: 400;
+  letter-spacing: var(--tr-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display headings — serif, italic permitted on h1/hero */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--t-h1);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-display);
+  color: var(--fg);
+  text-wrap: balance;
+  margin: 0;
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--t-h2);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  text-wrap: balance;
+  margin: 0;
+}
+h3, .h3 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--t-h3);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-tight);
+  margin: 0;
+}
+h4, .h4 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--t-h4);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+p { margin: 0; max-width: var(--measure); text-wrap: pretty; }
+
+/* Utility text classes ─────────────────────────────────────────── */
+.t-display-xl,
+.t-display-l,
+.t-display-m,
+.t-display-s {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-display);
+}
+.t-display-xl { font-size: var(--t-display-xl); }
+.t-display-l  { font-size: var(--t-display-l);  }
+.t-display-m  { font-size: var(--t-display-m);  }
+.t-display-s  { font-size: var(--t-display-s);  }
+
+.t-italic    { font-style: italic; }
+
+.t-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--t-eyebrow);
+  letter-spacing: var(--tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.t-body-l   { font-size: var(--t-body-l); }
+.t-body-s   { font-size: var(--t-body-s); }
+.t-caption  { font-size: var(--t-caption); color: var(--fg-muted); line-height: 1.5; }
+.t-mono     { font-family: var(--font-mono); font-size: var(--t-body-s); }
+
+.t-muted    { color: var(--fg-muted); }
+.t-faint    { color: var(--fg-faint); }
+.t-accent   { color: var(--accent); }
+
+/* Hairline rule ─────────────────────────────────────────────────── */
+.rule { height: 1px; background: var(--rule); border: 0; width: 100%; }
+
+/* Focus — non-negotiable, single style across the system ────────── */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+/* Selection — accent-tinted */
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
