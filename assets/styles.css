@@ -1304,3 +1304,32 @@ hr.rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
   letter-spacing: -0.02em;
   line-height: 1;
 }
+
+
+/* @anim-process-accent:start */
+@keyframes anim-process-accent {
+  0%   { opacity: 0.94; background-position: 0% 50%; }
+  50%  { opacity: 1;    background-position: 100% 50%; }
+  100% { opacity: 0.94; background-position: 0% 50%; }
+}
+.anim-process-accent {
+  display: block;
+  width: 100%;
+  min-height: clamp(120px, 28vh, 360px);
+  background: linear-gradient(135deg,
+    var(--color-paper, #F7F4EE) 0%,
+    var(--color-accent-soft, #EFE9DE) 50%,
+    var(--color-paper, #F7F4EE) 100%);
+  background-size: 200% 200%;
+  animation: anim-process-accent 6s ease-in-out infinite;
+  border-radius: 6px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .anim-process-accent {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+    background-position: 50% 50%;\n  }
+}
+/* @anim-process-accent:end */
